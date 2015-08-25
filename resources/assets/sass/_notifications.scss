@@ -1,0 +1,21 @@
+.flash-message,
+.js-flash-message {
+  display: inline-block;
+  position: fixed;
+  bottom: 50px;
+  right: 15px;
+  max-width: 450px;
+  opacity: .8;
+  z-index: 9999;
+  a {
+    color: $color-text1;
+    font-weight: bolder;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.my-tooltip {
+  cursor: pointer;
+}

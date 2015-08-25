@@ -1,0 +1,48 @@
+i.icon {
+  display: inline-block;
+  width: 10px;
+  margin-right: 10px;
+}
+
+span.form-error {
+  margin-top: 5px;
+  display: block;
+  font-size: .8em;
+  color: $brand-danger;
+  font-style: italic;
+  font-weight: 100
+}
+
+.footer {
+  min-height: 60px;
+  padding: 1rem 1rem;
+  margin-top: $margin-base;
+  margin-bottom: $baseline;
+  border-top: 1px solid $color-hr;
+  color: $color-gray;
+  font-size: $font-size-small;
+
+  a {
+    color: $color-gray;
+
+    &:hover {
+      color: $color-text1;
+    }
+  }
+
+  .locale__footer li.active {
+    background-color: $color-hr;
+    a {
+      color: $color-text1;
+    }
+  }
+}
+
+.back-to-top {
+  cursor: pointer;
+  position: fixed;
+  bottom: 1px;
+  right: 1px;
+  display: none;
+  z-index: 9998;
+}

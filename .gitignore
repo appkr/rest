@@ -1,0 +1,8 @@
+/.idea
+/vendor
+/node_modules
+/resources/vendor
+/tests/database.sqlite
+Homestead.yaml
+.env
+.DS_Store
