@@ -64,18 +64,6 @@ if (! function_exists('markdown')) {
     }
 }
 
-if (! function_exists('is_api_request')) {
-    /**
-     * Determine if the current request is from an api client
-     *
-     * @return mixed
-     */
-    function is_api_request()
-    {
-        return Request::is(config('fractal.pattern'));
-    }
-}
-
 if (! function_exists('save_image')) {
     /**
      * Resize and save image file

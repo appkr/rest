@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api\Auth;
 
 use App\Http\Controllers\Auth\RegisterController as GlobalRegisterController;
 use App\User;
-use Appkr\Fractal\ApiResponse;
+use Appkr\Fractal\Http\ApiResponse;
 use JWTAuth;
 
 /**

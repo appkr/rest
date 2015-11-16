@@ -10,7 +10,7 @@ return [
     | the current request is from an API client...
     |
     */
-    'pattern' => 'api/*',
+    'pattern' => 'v1/*',
 
     /*
     |--------------------------------------------------------------------------

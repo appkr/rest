@@ -2,27 +2,25 @@ language: php
 
 php:
   - 5.5.9
-  - 5.5
   - 5.6
   - 7.0
   - hhvm
 
-env:
-  global:
-    - setup=basic
-
-matrix:
-  include:
-    - php: 5.5.9
-      env: setup=lowest
-    - php: 5.5.9
-      env: setup=stable
-
 sudo: false
 
 install:
-  - if [[ $setup = 'basic' ]]; then travis_retry composer install --no-interaction --prefer-source; fi
-  - if [[ $setup = 'stable' ]]; then travis_retry composer update --prefer-source --no-interaction --prefer-stable; fi
-  - if [[ $setup = 'lowest' ]]; then travis_retry composer update --prefer-source --no-interaction --prefer-lowest --prefer-stable; fi
+  - travis_retry composer update --prefer-source --no-interaction --prefer-stable
+  - sudo gem install mailcatcher
+
+before_script:
+  - touch tests/database.sqlite
+  - php artisan vendor:publish --env="testing" --provider="\Appkr\Fractal\ApiServiceProvider"
+  - php artisan migrate --env="testing" --database="sqlite"
+  - php artisan db:seed --env="testing" --database="sqlite"
+  - sed -i "s/\/\/ $this->publishExamples();/$this->publishExamples();/" vendor/appkr/fractal/src/ApiServiceProvider.php;
+  - mailcatcher
 
 script: vendor/bin/phpunit
+
+matrix:
+  fast_finish: true

@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api\Auth;
 
 use App\Http\Controllers\Auth\SocialController as GlobalSocialController;
 use App\User;
-use Appkr\Fractal\ApiResponse;
+use Appkr\Fractal\Http\ApiResponse;
 use Socialite;
 
 class SocialController extends GlobalSocialController

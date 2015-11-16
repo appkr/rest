@@ -25,7 +25,6 @@
     "laravel/framework": "5.1.*",
     "appkr/socialite": "dev-master",
     "appkr/fractal": "0.5.*",
-    "league/fractal": "@dev",
     "barryvdh/laravel-cors": "0.7.x",
     "tymon/jwt-auth": "0.5.*",
     "laravelcollective/html": "~5.0",

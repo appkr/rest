@@ -15,7 +15,9 @@ trait DatabaseHelper
      */
     public function beginSeeding(EloquentModel $model = null, $faker = true)
     {
-        \DB::statement('SET FOREIGN_KEY_CHECKS=0');
+        if (app()->environment() !== 'testing') {
+            \DB::statement('SET FOREIGN_KEY_CHECKS=0');
+        }
 
         if ($model) {
             $model->truncate();
@@ -31,7 +33,9 @@ trait DatabaseHelper
      */
     public function endSeeding()
     {
-        \DB::statement('SET FOREIGN_KEY_CHECKS=1');
+        if (app()->environment() !== 'testing') {
+            \DB::statement('SET FOREIGN_KEY_CHECKS=1');
+        }
 
         return;
     }
