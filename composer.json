@@ -20,11 +20,12 @@
       "url": "git@github.com:appkr/socialite.git"
     }
   ],
+
   "require": {
     "php": ">=5.5.9",
     "laravel/framework": "5.1.*",
     "appkr/socialite": "dev-master",
-    "appkr/fractal": "0.5.*",
+    "appkr/api": "0.1.*",
     "barryvdh/laravel-cors": "0.7.x",
     "tymon/jwt-auth": "0.5.*",
     "laravelcollective/html": "~5.0",

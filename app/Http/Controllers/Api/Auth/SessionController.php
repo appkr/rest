@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api\Auth;
 
 use App\Http\Controllers\Auth\SessionController as GlobalSessionController;
 use App\Http\Requests\AuthRequest;
-use Appkr\Fractal\Http\ApiResponse;
+use Appkr\Api\Http\ApiResponse;
 use App\User;
 
 /**

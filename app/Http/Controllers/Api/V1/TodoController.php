@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\TodoRequest;
 use App\Todo;
 use App\Transformers\TodoTransformer;
-use Appkr\Fractal\Http\Response;
+use Appkr\Api\Http\Response;
 use Illuminate\Http\Request;
 
 /**
@@ -28,7 +28,7 @@ class TodoController extends Controller
 
     /**
      * @param \App\Todo               $repo
-     * @param \Appkr\Fractal\Http\Response $respond
+     * @param \Appkr\Api\Http\Response $respond
      */
     public function __construct(Todo $repo, Response $respond)
     {

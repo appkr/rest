@@ -147,7 +147,7 @@ return [
         /*
          * 3rd Party Service Providers...
          */
-        Appkr\Fractal\ApiServiceProvider::class,
+        Appkr\Api\ApiServiceProvider::class,
         Appkr\Socialite\SocialiteServiceProvider::class,
         Barryvdh\Cors\ServiceProvider::class,
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,

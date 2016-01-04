@@ -59,15 +59,15 @@ class Handler extends ExceptionHandler
     public function render($request, Exception $e)
     {
         if (is_api_request()) {
-            if ($e instanceof ModelNotFoundException or $e instanceof NotFoundHttpException) {
-                return app('api.response')->notFoundError(
-                    $e->getMessage() ?: trans('errors.resourceNotFound')
-                );
-            }
-
             if ($e instanceof MethodNotAllowedException or $e instanceof MethodNotAllowedHttpException) {
                 return app('api.response')->setStatusCode(405)->error(
                     $e->getMessage() ?: trans('errors.notExistingEndpoint')
+                );
+            }
+
+            if ($e instanceof ModelNotFoundException or $e instanceof NotFoundHttpException) {
+                return app('api.response')->notFoundError(
+                    $e->getMessage() ?: trans('errors.resourceNotFound')
                 );
             }
 
