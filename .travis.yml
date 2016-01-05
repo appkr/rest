@@ -1,23 +1,26 @@
 language: php
 
 php:
-  - 5.5.9
   - 5.6
   - 7.0
-  - hhvm
+
+env:
+  global:
+    - DB_CONNECTION=sqlite
 
 sudo: false
 
 install:
-  - travis_retry composer update --prefer-source --no-interaction --prefer-stable
-  - sudo gem install mailcatcher
+  - travis_retry composer install --no-interaction --prefer-source --no-scripts --dev
+  - travis_retry gem install mailcatcher
 
 before_script:
   - touch tests/database.sqlite
-  - php artisan vendor:publish --env="testing" --provider="\Appkr\Fractal\ApiServiceProvider"
-  - php artisan migrate --env="testing" --database="sqlite"
-  - php artisan db:seed --env="testing" --database="sqlite"
-  - sed -i "s/\/\/ $this->publishExamples();/$this->publishExamples();/" vendor/appkr/fractal/src/ApiServiceProvider.php;
+  - cp .env.example .env
+  - php artisan clear-compiled
+  - php artisan optimize
+  - php artisan migrate --env="testing" --database="sqlite" --force
+  - php artisan db:seed --env="testing" --database="sqlite" --force
   - mailcatcher
 
 script: vendor/bin/phpunit

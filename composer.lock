@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "appkr/api",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/appkr/api.git",
-                "reference": "6b9175bc72c6a1b7f7227b74bf6383b0c61152ba"
+                "reference": "23311f4358467c60fdfd91bb85f4637be6c8534a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/appkr/api/zipball/6b9175bc72c6a1b7f7227b74bf6383b0c61152ba",
-                "reference": "6b9175bc72c6a1b7f7227b74bf6383b0c61152ba",
+                "url": "https://api.github.com/repos/appkr/api/zipball/23311f4358467c60fdfd91bb85f4637be6c8534a",
+                "reference": "23311f4358467c60fdfd91bb85f4637be6c8534a",
                 "shasum": ""
             },
             "require": {
@@ -64,7 +64,7 @@
                 "fractal",
                 "laravel"
             ],
-            "time": "2016-01-04 14:58:24"
+            "time": "2016-01-04 18:56:50"
         },
         {
             "name": "appkr/socialite",
@@ -72,12 +72,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/appkr/socialite.git",
-                "reference": "d20c71dab6eb9d7f8a4cb09a6eac3f9f54610512"
+                "reference": "af58a99620c4287580f6695c75705603e86e5a37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/appkr/socialite/zipball/d20c71dab6eb9d7f8a4cb09a6eac3f9f54610512",
-                "reference": "d20c71dab6eb9d7f8a4cb09a6eac3f9f54610512",
+                "url": "https://api.github.com/repos/appkr/socialite/zipball/af58a99620c4287580f6695c75705603e86e5a37",
+                "reference": "af58a99620c4287580f6695c75705603e86e5a37",
                 "shasum": ""
             },
             "require": {
@@ -103,7 +103,7 @@
                 "source": "https://github.com/appkr/socialite/tree/master",
                 "issues": "https://github.com/appkr/socialite/issues"
             },
-            "time": "2015-06-24 09:16:56"
+            "time": "2016-01-04 19:04:28"
         },
         {
             "name": "asm89/stack-cors",
@@ -984,16 +984,16 @@
         },
         {
             "name": "intervention/image",
-            "version": "2.3.4",
+            "version": "2.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Intervention/image.git",
-                "reference": "a67ee32df0c6820cc6e861ad4144ee0ef9c74aa3"
+                "reference": "9f29360b8ab94585cb9e80cf9045abd5b85feb89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/image/zipball/a67ee32df0c6820cc6e861ad4144ee0ef9c74aa3",
-                "reference": "a67ee32df0c6820cc6e861ad4144ee0ef9c74aa3",
+                "url": "https://api.github.com/repos/Intervention/image/zipball/9f29360b8ab94585cb9e80cf9045abd5b85feb89",
+                "reference": "9f29360b8ab94585cb9e80cf9045abd5b85feb89",
                 "shasum": ""
             },
             "require": {
@@ -1042,7 +1042,7 @@
                 "thumbnail",
                 "watermark"
             ],
-            "time": "2015-11-30 17:03:21"
+            "time": "2016-01-02 19:15:13"
         },
         {
             "name": "jakub-onderka/php-console-color",
